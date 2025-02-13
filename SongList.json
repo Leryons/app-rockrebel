@@ -1,0 +1,638 @@
+[
+  {
+    "title": "Bohemian Rhapsody",
+    "artist": "Queen",
+    "genre": "Rock",
+    "year": 1975
+  },
+  {
+    "title": "Stairway to Heaven",
+    "artist": "Led Zeppelin",
+    "genre": "Hard Rock",
+    "year": 1971
+  },
+  {
+    "title": "Hotel California",
+    "artist": "Eagles",
+    "genre": "Rock",
+    "year": 1976
+  },
+  {
+    "title": "Back in Black",
+    "artist": "AC/DC",
+    "genre": "Hard Rock",
+    "year": 1980
+  },
+  {
+    "title": "Smells Like Teen Spirit",
+    "artist": "Nirvana",
+    "genre": "Grunge",
+    "year": 1991
+  },
+  {
+    "title": "Wish You Were Here",
+    "artist": "Pink Floyd",
+    "genre": "Progressive Rock",
+    "year": 1975
+  },
+  {
+    "title": "Hey Jude",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1968
+  },
+  {
+    "title": "Sweet Child O' Mine",
+    "artist": "Guns N' Roses",
+    "genre": "Hard Rock",
+    "year": 1987
+  },
+  {
+    "title": "Livin' on a Prayer",
+    "artist": "Bon Jovi",
+    "genre": "Rock",
+    "year": 1986
+  },
+  {
+    "title": "Wonderwall",
+    "artist": "Oasis",
+    "genre": "Britpop",
+    "year": 1995
+  },
+  {
+    "title": "Imagine",
+    "artist": "John Lennon",
+    "genre": "Rock",
+    "year": 1971
+  },
+  {
+    "title": "Light My Fire",
+    "artist": "The Doors",
+    "genre": "Psychedelic Rock",
+    "year": 1967
+  },
+  {
+    "title": "Comfortably Numb",
+    "artist": "Pink Floyd",
+    "genre": "Progressive Rock",
+    "year": 1979
+  },
+  {
+    "title": "Paint It Black",
+    "artist": "The Rolling Stones",
+    "genre": "Rock",
+    "year": 1966
+  },
+  {
+    "title": "Purple Haze",
+    "artist": "Jimi Hendrix",
+    "genre": "Psychedelic Rock",
+    "year": 1967
+  },
+  {
+    "title": "Heroes",
+    "artist": "David Bowie",
+    "genre": "Rock",
+    "year": 1977
+  },
+  {
+    "title": "Whole Lotta Love",
+    "artist": "Led Zeppelin",
+    "genre": "Hard Rock",
+    "year": 1969
+  },
+  {
+    "title": "Enter Sandman",
+    "artist": "Metallica",
+    "genre": "Heavy Metal",
+    "year": 1991
+  },
+  {
+    "title": "Sweet Emotion",
+    "artist": "Aerosmith",
+    "genre": "Hard Rock",
+    "year": 1975
+  },
+  {
+    "title": "Creep",
+    "artist": "Radiohead",
+    "genre": "Alternative Rock",
+    "year": 1992
+  },
+  {
+    "title": "Free Bird",
+    "artist": "Lynyrd Skynyrd",
+    "genre": "Southern Rock",
+    "year": 1973
+  },
+  {
+    "title": "Paranoid",
+    "artist": "Black Sabbath",
+    "genre": "Heavy Metal",
+    "year": 1970
+  },
+  {
+    "title": "Dream On",
+    "artist": "Aerosmith",
+    "genre": "Hard Rock",
+    "year": 1973
+  },
+  {
+    "title": "Under the Bridge",
+    "artist": "Red Hot Chili Peppers",
+    "genre": "Alternative Rock",
+    "year": 1991
+  },
+  {
+    "title": "November Rain",
+    "artist": "Guns N' Roses",
+    "genre": "Hard Rock",
+    "year": 1991
+  },
+  {
+    "title": "Born to Run",
+    "artist": "Bruce Springsteen",
+    "genre": "Rock",
+    "year": 1975
+  },
+  {
+    "title": "Come Together",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1969
+  },
+  {
+    "title": "Roxanne",
+    "artist": "The Police",
+    "genre": "Rock",
+    "year": 1978
+  },
+  {
+    "title": "Highway to Hell",
+    "artist": "AC/DC",
+    "genre": "Hard Rock",
+    "year": 1979
+  },
+  {
+    "title": "Breaking the Law",
+    "artist": "Judas Priest",
+    "genre": "Heavy Metal",
+    "year": 1980
+  },
+  {
+    "title": "London Calling",
+    "artist": "The Clash",
+    "genre": "Punk Rock",
+    "year": 1979
+  },
+  {
+    "title": "Black Dog",
+    "artist": "Led Zeppelin",
+    "genre": "Hard Rock",
+    "year": 1971
+  },
+  {
+    "title": "Seven Nation Army",
+    "artist": "The White Stripes",
+    "genre": "Garage Rock",
+    "year": 2003
+  },
+  {
+    "title": "Rebel Rebel",
+    "artist": "David Bowie",
+    "genre": "Glam Rock",
+    "year": 1974
+  },
+  {
+    "title": "My Generation",
+    "artist": "The Who",
+    "genre": "Rock",
+    "year": 1965
+  },
+  {
+    "title": "Free Fallin'",
+    "artist": "Tom Petty",
+    "genre": "Rock",
+    "year": 1989
+  },
+  {
+    "title": "La Grange",
+    "artist": "ZZ Top",
+    "genre": "Blues Rock",
+    "year": 1973
+  },
+  {
+    "title": "Bad to the Bone",
+    "artist": "George Thorogood & The Destroyers",
+    "genre": "Blues Rock",
+    "year": 1982
+  },
+  {
+    "title": "More Than a Feeling",
+    "artist": "Boston",
+    "genre": "Rock",
+    "year": 1976
+  },
+  {
+    "title": "I Love Rock 'n' Roll",
+    "artist": "Joan Jett & the Blackhearts",
+    "genre": "Rock",
+    "year": 1981
+  },
+  {
+    "title": "Kashmir",
+    "artist": "Led Zeppelin",
+    "genre": "Hard Rock",
+    "year": 1975
+  },
+  {
+    "title": "Gimme Shelter",
+    "artist": "The Rolling Stones",
+    "genre": "Rock",
+    "year": 1969
+  },
+  {
+    "title": "Black Hole Sun",
+    "artist": "Soundgarden",
+    "genre": "Grunge",
+    "year": 1994
+  },
+  {
+    "title": "Baba O'Riley",
+    "artist": "The Who",
+    "genre": "Rock",
+    "year": 1971
+  },
+  {
+    "title": "Iron Man",
+    "artist": "Black Sabbath",
+    "genre": "Heavy Metal",
+    "year": 1970
+  },
+  {
+    "title": "Alive",
+    "artist": "Pearl Jam",
+    "genre": "Grunge",
+    "year": 1991
+  },
+  {
+    "title": "The Joker",
+    "artist": "Steve Miller Band",
+    "genre": "Rock",
+    "year": 1973
+  },
+  {
+    "title": "Barracuda",
+    "artist": "Heart",
+    "genre": "Hard Rock",
+    "year": 1977
+  },
+  {
+    "title": "Pride (In the Name of Love)",
+    "artist": "U2",
+    "genre": "Rock",
+    "year": 1984
+  },
+  {
+    "title": "Killing in the Name",
+    "artist": "Rage Against the Machine",
+    "genre": "Alternative Rock",
+    "year": 1992
+  },
+  {
+    "title": "Roundabout",
+    "artist": "Yes",
+    "genre": "Progressive Rock",
+    "year": 1971
+  },
+  {
+    "title": "Run to the Hills",
+    "artist": "Iron Maiden",
+    "genre": "Heavy Metal",
+    "year": 1982
+  },
+  {
+    "title": "Don't Stop Believin'",
+    "artist": "Journey",
+    "genre": "Rock",
+    "year": 1981
+  },
+  {
+    "title": "White Room",
+    "artist": "Cream",
+    "genre": "Psychedelic Rock",
+    "year": 1968
+  },
+  {
+    "title": "Detroit Rock City",
+    "artist": "KISS",
+    "genre": "Hard Rock",
+    "year": 1976
+  },
+  {
+    "title": "Fortunate Son",
+    "artist": "Creedence Clearwater Revival",
+    "genre": "Rock",
+    "year": 1969
+  },
+  {
+    "title": "The Boys Are Back in Town",
+    "artist": "Thin Lizzy",
+    "genre": "Hard Rock",
+    "year": 1976
+  },
+  {
+    "title": "Love Bites",
+    "artist": "Def Leppard",
+    "genre": "Hard Rock",
+    "year": 1987
+  },
+  {
+    "title": "We're Not Gonna Take It",
+    "artist": "Twisted Sister",
+    "genre": "Glam Metal",
+    "year": 1984
+  },
+  {
+    "title": "Sultans of Swing",
+    "artist": "Dire Straits",
+    "genre": "Rock",
+    "year": 1978
+  },
+  {
+    "title": "Smoke on the Water",
+    "artist": "Deep Purple",
+    "genre": "Hard Rock",
+    "year": 1972
+  },
+  {
+    "title": "School's Out",
+    "artist": "Alice Cooper",
+    "genre": "Rock",
+    "year": 1972
+  },
+  {
+    "title": "Ramble On",
+    "artist": "Led Zeppelin",
+    "genre": "Hard Rock",
+    "year": 1969
+  },
+  {
+    "title": "You Really Got Me",
+    "artist": "The Kinks",
+    "genre": "Rock",
+    "year": 1964
+  },
+  {
+    "title": "Blitzkrieg Bop",
+    "artist": "Ramones",
+    "genre": "Punk Rock",
+    "year": 1976
+  },
+  {
+    "title": "Rock You Like a Hurricane",
+    "artist": "Scorpions",
+    "genre": "Hard Rock",
+    "year": 1984
+  },
+  {
+    "title": "Panama",
+    "artist": "Van Halen",
+    "genre": "Hard Rock",
+    "year": 1984
+  },
+  {
+    "title": "Ace of Spades",
+    "artist": "Motörhead",
+    "genre": "Heavy Metal",
+    "year": 1980
+  },
+  {
+    "title": "Jump",
+    "artist": "Van Halen",
+    "genre": "Hard Rock",
+    "year": 1984
+  },
+  {
+    "title": "God Save the Queen",
+    "artist": "Sex Pistols",
+    "genre": "Punk Rock",
+    "year": 1977
+  },
+  {
+    "title": "Eruption",
+    "artist": "Van Halen",
+    "genre": "Hard Rock",
+    "year": 1978
+  },
+  {
+    "title": "House of the Rising Sun",
+    "artist": "The Animals",
+    "genre": "Rock",
+    "year": 1964
+  },
+  {
+    "title": "Mississippi Queen",
+    "artist": "Mountain",
+    "genre": "Hard Rock",
+    "year": 1970
+  },
+  {
+    "title": "Sharp Dressed Man",
+    "artist": "ZZ Top",
+    "genre": "Rock",
+    "year": 1983
+  },
+  {
+    "title": "Crazy Train",
+    "artist": "Ozzy Osbourne",
+    "genre": "Heavy Metal",
+    "year": 1980
+  },
+  {
+    "title": "Man in the Box",
+    "artist": "Alice in Chains",
+    "genre": "Grunge",
+    "year": 1990
+  },
+  {
+    "title": "Somebody to Love",
+    "artist": "Queen",
+    "genre": "Rock",
+    "year": 1976
+  },
+  {
+    "title": "Tom Sawyer",
+    "artist": "Rush",
+    "genre": "Progressive Rock",
+    "year": 1981
+  },
+  {
+    "title": "Back on the Chain Gang",
+    "artist": "The Pretenders",
+    "genre": "Rock",
+    "year": 1982
+  },
+  {
+    "title": "Helter Skelter",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1968
+  },
+  {
+    "title": "Riders on the Storm",
+    "artist": "The Doors",
+    "genre": "Psychedelic Rock",
+    "year": 1971
+  },
+  {
+    "title": "All Along the Watchtower",
+    "artist": "The Jimi Hendrix Experience",
+    "genre": "Psychedelic Rock",
+    "year": 1968
+  },
+  {
+    "title": "(Don't Fear) The Reaper",
+    "artist": "Blue Öyster Cult",
+    "genre": "Rock",
+    "year": 1976
+  },
+  {
+    "title": "Heartbreaker",
+    "artist": "Pat Benatar",
+    "genre": "Rock",
+    "year": 1979
+  },
+  {
+    "title": "Should I Stay or Should I Go",
+    "artist": "The Clash",
+    "genre": "Punk Rock",
+    "year": 1982
+  },
+  {
+    "title": "I Want to Break Free",
+    "artist": "Queen",
+    "genre": "Rock",
+    "year": 1984
+  },
+  {
+    "title": "Paint It, Black",
+    "artist": "The Rolling Stones",
+    "genre": "Rock",
+    "year": 1966
+  },
+  {
+    "title": "Sweet Home Alabama",
+    "artist": "Lynyrd Skynyrd",
+    "genre": "Southern Rock",
+    "year": 1974
+  },
+  {
+    "title": "I Wanna Be Sedated",
+    "artist": "Ramones",
+    "genre": "Punk Rock",
+    "year": 1978
+  },
+  {
+    "title": "Money",
+    "artist": "Pink Floyd",
+    "genre": "Progressive Rock",
+    "year": 1973
+  },
+  {
+    "title": "Funk #49",
+    "artist": "James Gang",
+    "genre": "Rock",
+    "year": 1970
+  },
+  {
+    "title": "Rock and Roll All Nite",
+    "artist": "KISS",
+    "genre": "Hard Rock",
+    "year": 1975
+  },
+  {
+    "title": "Born to Be Wild",
+    "artist": "Steppenwolf",
+    "genre": "Rock",
+    "year": 1968
+  },
+  {
+    "title": "High Voltage",
+    "artist": "AC/DC",
+    "genre": "Hard Rock",
+    "year": 1976
+  },
+  {
+    "title": "Ohio",
+    "artist": "Crosby, Stills, Nash & Young",
+    "genre": "Rock",
+    "year": 1970
+  },
+  {
+    "title": "No One Knows",
+    "artist": "Queens of the Stone Age",
+    "genre": "Alternative Rock",
+    "year": 2002
+  },
+  {
+    "title": "In the End",
+    "artist": "Linkin Park",
+    "genre": "Nu Metal",
+    "year": 2000
+  },
+  {
+    "title": "Revolution",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1968
+  },
+  {
+    "title": "Runaway",
+    "artist": "Bon Jovi",
+    "genre": "Rock",
+    "year": 1984
+  },
+  {
+    "title": "Carry On Wayward Son",
+    "artist": "Kansas",
+    "genre": "Rock",
+    "year": 1976
+  },
+  {
+    "title": "Highway Star",
+    "artist": "Deep Purple",
+    "genre": "Hard Rock",
+    "year": 1972
+  },
+  {
+    "title": "Foreplay/Long Time",
+    "artist": "Boston",
+    "genre": "Rock",
+    "year": 1976
+  },
+  {
+    "title": "Rock and Roll",
+    "artist": "Led Zeppelin",
+    "genre": "Hard Rock",
+    "year": 1971
+  },
+  {
+    "title": "Fat Bottomed Girls",
+    "artist": "Queen",
+    "genre": "Rock",
+    "year": 1978
+  },
+  {
+    "title": "Don't Look Back in Anger",
+    "artist": "Oasis",
+    "genre": "Britpop",
+    "year": 1995
+  },
+  {
+    "title": "My Sharona",
+    "artist": "The Knack",
+    "genre": "Rock",
+    "year": 1979
+  }
+]
