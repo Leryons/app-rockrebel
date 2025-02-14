@@ -1,12 +1,37 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:RockRebel.Models"
+             xmlns:viewmodel="clr-namespace:RockRebel.ViewModels"
+             x:DataType="viewmodel:SongViewModel"
+             x:Name="Page"
              x:Class="RockRebel.Views.HomePage">
 
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            class="label"/>
-    </VerticalStackLayout>
-    
+    <ScrollView>
+
+        <CollectionView ItemsSource="{Binding Songs}">
+
+            <CollectionView.ItemTemplate>
+
+                <DataTemplate x:DataType="model:Song">
+
+                    <StackLayout Padding="10">
+
+                        <Label Text="{Binding Title}" FontSize="Large" />
+                        <Label Text="{Binding Artist}" FontSize="Medium" />
+                        <Label Text="{Binding Genre}" FontSize="Small" />
+
+                        <Picker Title="Choose a genre..."
+                                x:DataType="viewmodel:SongViewModel"
+                                ItemsSource="{Binding Source={x:Reference Page}, Path=BindingContext.Genres}"
+                                SelectedItem="{Binding SelectedGenre, Mode=TwoWay, Source={RelativeSource AncestorType={x:Type viewmodel:SongViewModel}}}"/>
+
+                    </StackLayout>
+
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </ScrollView>
 </ContentPage>

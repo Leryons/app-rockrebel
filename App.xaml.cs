@@ -3,6 +3,7 @@
 public partial class App : Application
 {
     private readonly SongServices songServices;
+    
     public App(SongServices songServices)
     {
         InitializeComponent();
@@ -12,12 +13,5 @@ public partial class App : Application
     protected override Window CreateWindow(IActivationState? activationState)
     {
         return new Window(new AppShell());
-    }
-
-    protected override async void OnStart()
-    {
-        // Handle when your app starts
-        base.OnStart();
-        await songServices.GetSongs();
     }
 }

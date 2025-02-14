@@ -17,8 +17,14 @@ public static class MauiProgram
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
-        builder.Services.AddSingleton<SongServices>();
+        // Services
+        builder.Services.AddSingleton<Database>();
+        builder.Services.AddTransient<SongServices>();
 
+        // ViewModels
+        builder.Services.AddTransient<SongViewModel>();
+
+        // Pages
         builder.Services.AddSingleton<HomePage>();
 
         return builder.Build();

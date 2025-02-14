@@ -3,50 +3,39 @@
 public class SongServices
 {
     private List<Song> songs;
+    private readonly Database database;
 
-    public SongServices()
+    public SongServices(Database database)
     {
         songs = [];
+        this.database = database;
     }
 
     public async Task<List<Song>?> GetSongs()
     {
         try
         {
-            var jsonPath = Path.Combine(AppContext.BaseDirectory, "SongList.json");
-
-            if (File.Exists(jsonPath))
-            {
-                var jsonContent = await File.ReadAllTextAsync(jsonPath);
-
-                var deserializedSongs = JsonConvert.DeserializeObject<List<Song>>(jsonContent);
-
-                if (deserializedSongs != null)
-                {
-                    songs = deserializedSongs;
-                }
-
-                //foreach (var song in songs)
-                //{
-                //    Debug.WriteLine($"Title: {song.Title}");
-                //    Debug.WriteLine($"Artist: {song.Artist}");
-                //    Debug.WriteLine($"Genre: {song.Genre}");
-                //    Debug.WriteLine($"Year: {song.Year}");
-                //    Debug.WriteLine("");
-                //}
-            }
-
-            else
-            {
-                Debug.WriteLine("File not found.");
-            }
+            songs = await database.GetSongs();
 
             return songs;
         }
-
-        catch (Exception ex)
+        catch (Exception e)
         {
-            Debug.WriteLine($"Error: {ex.Message}");
+            Debug.WriteLine(e);
+            return null;
+        }
+
+    }
+
+    public async Task<List<Song>?> FilteredSong(string genre)
+    {
+        try
+        {
+            return await database.FilteredSong(genre);
+        }
+        catch (Exception e)
+        {
+            Debug.WriteLine(e);
             return null;
         }
     }
