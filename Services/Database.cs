@@ -32,15 +32,39 @@ public class Database
                            .ToListAsync();
     }
 
-    public async Task<int> SaveSong(Song song)
+    public async Task AddLike(string songTitle)
     {
-        if (song.Id != 0)
+        try
         {
-            return await sQLite.UpdateAsync(song);
+            var song = await sQLite.Table<Song>().Where(s => s.Title == songTitle).FirstOrDefaultAsync();
+
+            if (song != null)
+            {
+                song.Likes++;
+
+                await sQLite.UpdateAsync(song);
+
+                Debug.WriteLine($"Likes incremented for song: {song.Title}");
+
+                var updatedSong = await sQLite.Table<Song>().Where(s => s.Title == songTitle).FirstOrDefaultAsync();
+                if (updatedSong != null && updatedSong.Likes == song.Likes)
+                {
+                    Debug.WriteLine("Update confirmed.");
+                }
+                else
+                {
+                    Debug.WriteLine("Update not confirmed.");
+
+                }
+            }
+            else
+            {
+                Debug.WriteLine("Song not found.");
+            }
         }
-        else
+        catch (Exception ex)
         {
-            return await sQLite.InsertAsync(song);
+            Debug.WriteLine($"Error updating likes: {ex.Message}");
         }
     }
 }

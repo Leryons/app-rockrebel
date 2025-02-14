@@ -2,8 +2,7 @@
 
 public class Song
 {
-    [PrimaryKey, AutoIncrement]
-    public int Id { get; set; }
+    [PrimaryKey]
     public string? Title { get; set; }
     public string? Artist { get; set; }
     public string? Genre { get; set; }

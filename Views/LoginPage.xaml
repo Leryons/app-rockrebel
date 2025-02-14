@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:RockRebel.Models"
+             xmlns:viewmodel="clr-namespace:RockRebel.ViewModels"
+             x:DataType="viewmodel:UserViewModel"
+             x:Class="RockRebel.Views.LoginPage">
+
+    <ScrollView>
+        
+        <Grid ColumnDefinitions="*,250,*"
+       RowDefinitions="*,*,*">
+
+            <VerticalStackLayout Grid.Column="1"
+                          Grid.Row="0"
+                          VerticalOptions="End">
+
+                <Image Source="Resources/Images/logo.png"
+                WidthRequest="180"/>
+
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="1"
+                          Grid.Column="1">
+
+                <Label Text="Refreshing Dreams"
+                FontSize="27"
+                FontFamily="Serif"
+                HorizontalOptions="Center"
+                Margin="20"/>
+
+                <Border>
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="5"/>
+                    </Border.StrokeShape>
+
+                    <StackLayout>
+
+                        <Entry Placeholder="E-mail"
+                        Margin="5"
+                        Text="{Binding Email}"/>
+
+                        <Entry Placeholder="Password"
+                        IsPassword="True"
+                        Margin ="5"
+                        Text="{Binding Password}"/>
+
+                        <Label Text="Don't have any account?"
+                        HorizontalOptions="Center"
+                        Margin="0,20,0,0">
+
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="SignUp"/>
+                            </Label.GestureRecognizers>
+
+                        </Label>
+
+                        <Button Text="Login"
+                         Command="{Binding LoginUserCommand}"
+                         Margin="5"/>
+
+                    </StackLayout>
+
+                </Border>
+
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+    
+    
+</ContentPage>

@@ -39,4 +39,16 @@ public class SongServices
             return null;
         }
     }
+
+    public async Task AddLike(string title)
+    {
+        try
+        {
+            await database.AddLike(title);
+        }
+        catch (Exception e)
+        {
+            Debug.WriteLine(e);
+        }
+    }
 }

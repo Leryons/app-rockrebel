@@ -19,12 +19,16 @@
                         <Label Text="{Binding Title}" FontSize="Large" />
                         <Label Text="{Binding Artist}" FontSize="Medium" />
                         <Label Text="{Binding Genre}" FontSize="Small" />
+                        <Label Text="{Binding Likes}"/>
 
                         <Picker Title="Choose a genre..."
                                 x:DataType="viewmodel:SongViewModel"
                                 ItemsSource="{Binding Source={x:Reference Page}, Path=BindingContext.Genres}"
                                 SelectedItem="{Binding SelectedGenre, Mode=TwoWay, Source={RelativeSource AncestorType={x:Type viewmodel:SongViewModel}}}"/>
 
+                        <Button Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:SongViewModel}}, Path=AddLikeCommand}"
+                                CommandParameter="{Binding Title}" Text="Like"/>
+                        
                     </StackLayout>
 
                 </DataTemplate>

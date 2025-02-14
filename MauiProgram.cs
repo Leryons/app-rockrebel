@@ -19,13 +19,18 @@ public static class MauiProgram
 #endif
         // Services
         builder.Services.AddSingleton<Database>();
-        builder.Services.AddTransient<SongServices>();
+        builder.Services.AddSingleton<SongServices>();
+        builder.Services.AddTransient<UserServices>();
 
         // ViewModels
-        builder.Services.AddTransient<SongViewModel>();
+        builder.Services.AddTransient<UserViewModel>();
+        builder.Services.AddSingleton<SongViewModel>();
+        
 
         // Pages
         builder.Services.AddSingleton<HomePage>();
+        builder.Services.AddTransient<LoginPage>();
+        builder.Services.AddTransient<SignUpPage>();
 
         return builder.Build();
     }

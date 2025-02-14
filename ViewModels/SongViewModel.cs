@@ -80,4 +80,14 @@ public partial class SongViewModel : ObservableObject
             Debug.WriteLine("No filtered songs found.");
         }
     }
+
+    [RelayCommand]
+    public async Task AddLike(string songTitle)
+    {
+        MainThread.BeginInvokeOnMainThread(async () =>
+        {
+            Debug.WriteLine($"Adding like to song with ID: {songTitle}");
+            await _songServices.AddLike(songTitle);
+        });
+    }
 }

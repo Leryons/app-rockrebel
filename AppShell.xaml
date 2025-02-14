@@ -8,8 +8,8 @@
     Title="RockRebel">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate view:HomePage}"
-        Route="HomePage" />
+        Title="Login"
+        ContentTemplate="{DataTemplate view:LoginPage}"
+        Route="LoginPage" />
 
 </Shell>
