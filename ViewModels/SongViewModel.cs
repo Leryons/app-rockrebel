@@ -11,10 +11,14 @@ public partial class SongViewModel : ObservableObject
     [ObservableProperty]
     private string _selectedGenre;
 
+    [ObservableProperty]
+    private string _popSong;
+
     public SongViewModel(SongServices songServices)
     {
         this._songServices = songServices;
         LoadSongs();
+        FavoriteSong();
     }
 
     private async void LoadSongs()
@@ -89,5 +93,15 @@ public partial class SongViewModel : ObservableObject
             Debug.WriteLine($"Adding like to song with ID: {songTitle}");
             await _songServices.AddLike(songTitle);
         });
+    }
+
+    private async void FavoriteSong()
+    {
+        var song = await _songServices.PopularSong();
+        if (song != null)
+        {
+            _popSong = song.Title;
+            Debug.WriteLine($"Most Popular song is {_popSong}");
+        }
     }
 }

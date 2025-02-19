@@ -85,7 +85,7 @@
 
 	<ItemGroup>
 	  <None Update="Songs.db3">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>
 

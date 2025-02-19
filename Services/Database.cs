@@ -9,7 +9,8 @@ public class Database
         try
         {
             var path = Path.Combine(AppContext.BaseDirectory, "Songs.db3");
-            sQLite = new SQLiteAsyncConnection(path);
+            var path2 = "C:\\Users\\pulga\\source\\repos\\RockRebel\\Songs.db3";
+            sQLite = new SQLiteAsyncConnection(path2);
             sQLite.CreateTableAsync<Song>().Wait();
         }
         catch (Exception e)
@@ -66,5 +67,12 @@ public class Database
         {
             Debug.WriteLine($"Error updating likes: {ex.Message}");
         }
+    }
+
+    public async Task<Song> PopularSong()
+    {
+        var popularSong = await sQLite.Table<Song>().OrderByDescending(s => s.Likes).FirstOrDefaultAsync();
+
+        return popularSong;
     }
 }

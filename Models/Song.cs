@@ -1,5 +1,6 @@
 ﻿namespace RockRebel.Models;
 
+[Table("Song")]
 public class Song
 {
     [PrimaryKey]

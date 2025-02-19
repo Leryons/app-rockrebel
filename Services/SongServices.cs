@@ -51,4 +51,10 @@ public class SongServices
             Debug.WriteLine(e);
         }
     }
+
+    public async Task<Song> PopularSong()
+    {
+        return await database.PopularSong();
+    }
+
 }

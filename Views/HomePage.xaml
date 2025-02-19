@@ -28,7 +28,10 @@
 
                         <Button Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:SongViewModel}}, Path=AddLikeCommand}"
                                 CommandParameter="{Binding Title}" Text="Like"/>
-                        
+
+                        <Label TextColor="Red" 
+                            Text="{Binding PopSong, Source={RelativeSource AncestorType={x:Type viewmodel:SongViewModel}}}"/>
+
                     </StackLayout>
 
                 </DataTemplate>
