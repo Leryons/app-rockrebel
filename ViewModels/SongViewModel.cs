@@ -111,10 +111,22 @@ public partial class SongViewModel : ObservableObject
     [RelayCommand]
     private async void RefreshData()
     {
+        if (_busy)
+        {
+            return;
+        }
         _busy = true;
-        Songs.Clear();
-        LoadSongs();
-        _busy = false;
+        try
+        {
+            await Task.Delay(2000);
+            LoadSongs();
+            FavoriteSong();
+            _songServices.PutSongsOnBdd();
+        }
+        finally
+        {
+            _busy = false;
+        }
 
     }
 }

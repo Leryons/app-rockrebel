@@ -8,21 +8,21 @@ public class UserServices
     {
         this.database = database;
 
-        database.sQLiteAsyncConnection.CreateTableAsync<User>().Wait();
+        database.sQLiteConnection.CreateTable<User>();
     }
 
     public async Task<User> LoginUser(string email, string password)
     {
-        return await database.sQLiteAsyncConnection.Table<User>()
+        return  database.sQLiteConnection.Table<User>()
                                                    .Where(s => s.Email == email && s.Password == password)
-                                                   .FirstOrDefaultAsync();
+                                                   .FirstOrDefault();
     }
 
     public async Task<bool> RegisterUser(string email, string name, string lastname, string password)
     {
-        var existingUser = await database.sQLiteAsyncConnection.Table<User>()
+        var existingUser = database.sQLiteConnection.Table<User>()
                                                  .Where(p => p.Email == email)
-                                                 .FirstOrDefaultAsync();
+                                                 .FirstOrDefault();
 
         if (existingUser != null)
         {
@@ -37,7 +37,7 @@ public class UserServices
             Password = password
         };
 
-        await database.sQLiteAsyncConnection.InsertAsync(newUser);
+        database.sQLiteConnection.Insert(newUser);
         return true;
     }
 }

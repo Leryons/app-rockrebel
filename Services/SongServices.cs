@@ -37,7 +37,7 @@ public class SongServices
                 Genre = prop["genre"].ToString(),
                 Likes = int.Parse(prop["likes"].ToString())
             };
-            database.sQLiteAsyncConnection.InsertAsync(song);
+            database.sQLiteConnection.Insert(song);
         }
         return songs;
     }
@@ -47,7 +47,10 @@ public class SongServices
     {
         try
         {
-            songs = await database.GetSongs();
+            if(songs.Count == 0)
+            {
+                songs = await database.GetSongs();
+            }
 
             return songs;
         }

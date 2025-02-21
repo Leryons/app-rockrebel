@@ -2,15 +2,15 @@
 
 public class Database
 {
-    private readonly SQLiteAsyncConnection sQLite;
+    private readonly SQLiteConnection sQLite;
 
     public Database()
     {
         try
         {
             var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Songs.db");
-            sQLite = new SQLiteAsyncConnection(path);
-            sQLite.CreateTableAsync<Song>().Wait();
+            sQLite = new SQLiteConnection(path);
+            sQLite.CreateTable<Song>();
         }
         catch (Exception e)
         {
@@ -18,36 +18,36 @@ public class Database
         }
     }
 
-    public SQLiteAsyncConnection sQLiteAsyncConnection => sQLite;
+    public SQLiteConnection sQLiteConnection => sQLite;
 
 
     public async Task<List<Song>> GetSongs()
     {
-        return await sQLite.Table<Song>().ToListAsync();
+        return sQLite.Table<Song>().ToList();
     }
 
     public async Task<List<Song>> FilteredSong(string genre)
     {
-        return await sQLite.Table<Song>()
+        return sQLite.Table<Song>()
                            .Where(s => s.Genre == genre)
-                           .ToListAsync();
+                           .ToList();
     }
 
     public async Task AddLike(string songTitle)
     {
         try
         {
-            var song = await sQLite.Table<Song>().Where(s => s.Title == songTitle).FirstOrDefaultAsync();
+            var song = sQLite.Table<Song>().Where(s => s.Title == songTitle).FirstOrDefault();
 
             if (song != null)
             {
                 song.Likes++;
 
-                await sQLite.UpdateAsync(song);
+                sQLite.Update(song);
 
                 Debug.WriteLine($"Likes incremented for song: {song.Title}");
 
-                var updatedSong = await sQLite.Table<Song>().Where(s => s.Title == songTitle).FirstOrDefaultAsync();
+                var updatedSong = sQLite.Table<Song>().Where(s => s.Title == songTitle).FirstOrDefault();
                 if (updatedSong != null && updatedSong.Likes == song.Likes)
                 {
                     Debug.WriteLine("Update confirmed.");
@@ -71,7 +71,7 @@ public class Database
 
     public async Task<Song> PopularSong()
     {
-        var popularSong = await sQLite.Table<Song>().OrderByDescending(s => s.Likes).FirstOrDefaultAsync();
+        var popularSong = sQLite.Table<Song>().OrderByDescending(s => s.Likes).FirstOrDefault();
 
         return popularSong;
     }
