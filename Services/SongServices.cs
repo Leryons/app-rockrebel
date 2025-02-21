@@ -17,6 +17,8 @@ public class SongServices
     {
         var url = "https://raw.githubusercontent.com/Leryons/Songs/refs/heads/main/SongsList.json";
 
+        Debug.WriteLine("Fetching songs from: " + url);
+
         HttpResponseMessage response = await http.GetAsync(url);
         response.EnsureSuccessStatusCode();
 
@@ -37,7 +39,7 @@ public class SongServices
                 Genre = prop["genre"].ToString(),
             };
 
-            Debug.WriteLine(song.Title);
+            Debug.WriteLine(song.Title + "    NICE");
             database.sQLiteConnection.Insert(song);
         }
         return songs;
