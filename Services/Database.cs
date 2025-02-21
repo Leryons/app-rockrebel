@@ -8,9 +8,8 @@ public class Database
     {
         try
         {
-            var path = Path.Combine(AppContext.BaseDirectory, "Songs.db3");
-            var path2 = "C:\\Users\\pulga\\source\\repos\\RockRebel\\Songs.db3";
-            sQLite = new SQLiteAsyncConnection(path2);
+            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Songs.db");
+            sQLite = new SQLiteAsyncConnection(path);
             sQLite.CreateTableAsync<Song>().Wait();
         }
         catch (Exception e)
@@ -20,6 +19,7 @@ public class Database
     }
 
     public SQLiteAsyncConnection sQLiteAsyncConnection => sQLite;
+
 
     public async Task<List<Song>> GetSongs()
     {

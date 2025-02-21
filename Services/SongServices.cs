@@ -4,12 +4,44 @@ public class SongServices
 {
     private List<Song> songs;
     private readonly Database database;
+    private readonly HttpClient http;
 
     public SongServices(Database database)
     {
         songs = [];
         this.database = database;
+        http = new HttpClient();
     }
+
+    public async Task<List<Song>> PutSongsOnBdd()
+    {
+        var url = "https://raw.githubusercontent.com/Leryons/Songs/refs/heads/main/SongsList.json";
+
+        HttpResponseMessage response = await http.GetAsync(url);
+        response.EnsureSuccessStatusCode();
+
+        string responseBody = await response.Content.ReadAsStringAsync();
+        var jArray = JArray.Parse(responseBody);
+
+        if (songs != null)
+        {
+            songs.Clear();
+        }
+
+        foreach (var prop in jArray)
+        {
+            var song = new Song
+            {
+                Title = prop["title"].ToString(),
+                Artist = prop["artist"].ToString(),
+                Genre = prop["genre"].ToString(),
+                Likes = int.Parse(prop["likes"].ToString())
+            };
+            database.sQLiteAsyncConnection.InsertAsync(song);
+        }
+        return songs;
+    }
+
 
     public async Task<List<Song>?> GetSongs()
     {

@@ -14,6 +14,9 @@ public partial class SongViewModel : ObservableObject
     [ObservableProperty]
     private string _popSong;
 
+    [ObservableProperty]
+    private bool _busy;
+
     public SongViewModel(SongServices songServices)
     {
         this._songServices = songServices;
@@ -103,5 +106,15 @@ public partial class SongViewModel : ObservableObject
             _popSong = song.Title;
             Debug.WriteLine($"Most Popular song is {_popSong}");
         }
+    }
+
+    [RelayCommand]
+    private async void RefreshData()
+    {
+        _busy = true;
+        Songs.Clear();
+        LoadSongs();
+        _busy = false;
+
     }
 }

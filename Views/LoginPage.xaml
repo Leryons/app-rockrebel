@@ -6,7 +6,7 @@
              x:DataType="viewmodel:UserViewModel"
              x:Class="RockRebel.Views.LoginPage">
 
-    <ScrollView>
+    <ScrollView >
         
         <Grid ColumnDefinitions="*,250,*"
        RowDefinitions="*,*,*">
@@ -23,7 +23,7 @@
             <VerticalStackLayout Grid.Row="1"
                           Grid.Column="1">
 
-                <Label Text="Refreshing Dreams"
+                <Label Text="Rock Rebel"
                 FontSize="27"
                 FontFamily="Serif"
                 HorizontalOptions="Center"
