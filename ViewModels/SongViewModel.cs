@@ -114,13 +114,22 @@ public partial class SongViewModel : ObservableObject
     {
         if (IsBusy)
         {
+            Debug.WriteLine("Already refreshing data.");  
             return;
         }
         try
         {
             IsBusy = true;
             Songs.Clear();
-            _songServices.PutSongsOnBdd();
+            
+            if(Songs.Count() == 0)
+            {
+                Debug.WriteLine("List empty");
+            }
+
+            LoadSongs();
+
+            Debug.WriteLine("Data refreshed.");
         }
         finally
         {

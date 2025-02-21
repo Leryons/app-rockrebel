@@ -7,7 +7,9 @@
              x:Class="RockRebel.Views.HomePage">
 
     <ContentPage.Content>
-        <RefreshView IsRefreshing="{Binding IsBusy}" Command="{Binding RefreshDataCommand}">
+        <RefreshView IsRefreshing="{Binding IsBusy}" 
+                     Command="{Binding RefreshDataCommand}"
+                     RefreshColor="White">
             <Grid ColumnDefinitions="*,*"
                   RowDefinitions="auto,*"
                   Padding="10">
@@ -74,15 +76,12 @@
 
                     <Label Text="Most popular song: "
                            HorizontalTextAlignment="Center"/>
-                    
+
                     <Label Text="{Binding PopSong}"
                            FontSize="15"/>
 
-                    <ActivityIndicator IsVisible="{Binding IsBusy}"
-                           IsRunning="{Binding IsBusy}"
-                           HorizontalOptions="FillAndExpand"
-                           VerticalOptions="CenterAndExpand"
-                           Color="White"/>
+                    <Button Command="{Binding RefreshDataCommand}"
+                            Text="Refresh"/>
 
                 </VerticalStackLayout>
 
