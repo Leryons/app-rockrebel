@@ -22,6 +22,7 @@ public partial class SongViewModel : ObservableObject
         this._songServices = songServices;
         LoadSongs();
         FavoriteSong();
+        _songServices.PutSongsOnBdd();
     }
 
     private async void LoadSongs()

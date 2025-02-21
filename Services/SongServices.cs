@@ -35,8 +35,9 @@ public class SongServices
                 Title = prop["title"].ToString(),
                 Artist = prop["artist"].ToString(),
                 Genre = prop["genre"].ToString(),
-                Likes = int.Parse(prop["likes"].ToString())
             };
+
+            Debug.WriteLine(song.Title);
             database.sQLiteConnection.Insert(song);
         }
         return songs;
