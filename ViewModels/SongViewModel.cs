@@ -9,10 +9,7 @@ public partial class SongViewModel : ObservableObject
     public ObservableCollection<string> Genres { get; set; } = [];
 
     [ObservableProperty]
-    [NotifyPropertyChangedFor(nameof(IsNotBusy))]
-    bool isBusy;
-
-    public bool IsNotBusy => !IsBusy;
+    private bool _isBusy;
 
     [ObservableProperty]
     private string _selectedGenre;
@@ -122,9 +119,7 @@ public partial class SongViewModel : ObservableObject
         try
         {
             IsBusy = true;
-            await Task.Delay(2000);
-            LoadSongs();
-            FavoriteSong();
+            Songs.Clear();
             _songServices.PutSongsOnBdd();
         }
         finally
