@@ -7,7 +7,7 @@
              x:Class="RockRebel.Views.HomePage">
 
     <ContentPage.Content>
-        <RefreshView IsRefreshing="{Binding Busy}" Command="{Binding RefreshDataCommand}">
+        <RefreshView IsRefreshing="{Binding IsBusy}" Command="{Binding RefreshDataCommand}">
             <Grid ColumnDefinitions="*,*"
                   RowDefinitions="auto,*"
                   Padding="10">
@@ -39,11 +39,6 @@
                                        Grid.Column="0"
                                        Grid.Row="3"/>
 
-                                <Label Text="{Binding Year}"
-                                       FontSize="12"
-                                       Grid.Column="0"
-                                       Grid.Row="2"/>
-
                                 <Label Text="{Binding Likes}"
                                        Grid.Column="2"
                                        Grid.Row="1"
@@ -52,6 +47,7 @@
                                 <Button Text="Like"
                                         Grid.Column="1"
                                         WidthRequest="50"
+                                        HeightRequest="20"
                                         HorizontalOptions="End"
                                         Command="{Binding Source={x:Reference Page}, Path=BindingContext.AddLikeCommand}"
                                         CommandParameter="{Binding Title}"/>
@@ -81,6 +77,12 @@
                     
                     <Label Text="{Binding PopSong}"
                            FontSize="15"/>
+
+                    <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Color="White"/>
 
                 </VerticalStackLayout>
 

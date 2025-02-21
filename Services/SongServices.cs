@@ -25,7 +25,11 @@ public class SongServices
         string responseBody = await response.Content.ReadAsStringAsync();
         var jArray = JArray.Parse(responseBody);
 
-        if (songs != null)
+        if (songs == null)
+        {
+            songs = new List<Song>();
+        }
+        else
         {
             songs.Clear();
         }
@@ -34,14 +38,30 @@ public class SongServices
         {
             var song = new Song
             {
-                Title = prop["title"].ToString(),
-                Artist = prop["artist"].ToString(),
-                Genre = prop["genre"].ToString(),
+                Title = prop["title"]?.ToString(),
+                Artist = prop["artist"]?.ToString(),
+                Genre = prop["genre"]?.ToString(),
             };
 
-            Debug.WriteLine(song.Title + "    NICE");
-            database.sQLiteConnection.Insert(song);
+            if (song.Title != null && song.Artist != null && song.Genre != null)
+            {
+                songs.Add(song);
+                Debug.WriteLine(song.Title + "    NICE");
+                try
+                {
+                    database.sQLiteConnection.InsertOrReplace(song);
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine("Error inserting song: " + ex.Message);
+                }
+            }
+            else
+            {
+                Debug.WriteLine("Invalid song data: " + prop.ToString());
+            }
         }
+
         return songs;
     }
 

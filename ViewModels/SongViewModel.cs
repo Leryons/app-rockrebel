@@ -9,13 +9,16 @@ public partial class SongViewModel : ObservableObject
     public ObservableCollection<string> Genres { get; set; } = [];
 
     [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(IsNotBusy))]
+    bool isBusy;
+
+    public bool IsNotBusy => !IsBusy;
+
+    [ObservableProperty]
     private string _selectedGenre;
 
     [ObservableProperty]
     private string _popSong;
-
-    [ObservableProperty]
-    private bool _busy;
 
     public SongViewModel(SongServices songServices)
     {
@@ -112,13 +115,13 @@ public partial class SongViewModel : ObservableObject
     [RelayCommand]
     private async void RefreshData()
     {
-        if (_busy)
+        if (IsBusy)
         {
             return;
         }
-        _busy = true;
         try
         {
+            IsBusy = true;
             await Task.Delay(2000);
             LoadSongs();
             FavoriteSong();
@@ -126,7 +129,7 @@ public partial class SongViewModel : ObservableObject
         }
         finally
         {
-            _busy = false;
+            IsBusy = false;
         }
 
     }
