@@ -120,16 +120,8 @@ public partial class SongViewModel : ObservableObject
         try
         {
             IsBusy = true;
-            Songs.Clear();
-            
-            if(Songs.Count() == 0)
-            {
-                Debug.WriteLine("List empty");
-            }
 
-            LoadSongs();
-
-            Debug.WriteLine("Data refreshed.");
+            _songService.RefreshList();
         }
         finally
         {

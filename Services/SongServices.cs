@@ -115,4 +115,25 @@ public class SongServices
         return await database.PopularSong();
     }
 
+    public async Task<List<Song>> RefreshList()
+    {
+        try
+        {
+            if (songs.Count == 0)
+            {
+                songs = await database.GetSongs();
+            }
+            else
+            {
+                songs.Clear();
+                songs = await database.GetSongs();
+            }
+            return songs;
+        }
+        catch (Exception e)
+        {
+            Debug.WriteLine(e);
+            return new List<Song>(); // Return an empty list in case of an exception
+        }
+    }
 }
